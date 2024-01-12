@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 # parameters
-ARG EXERCISE_NAME="ros-basics"
+ARG EXERCISE_NAME="lx-ros-basics"
 ARG DESCRIPTION="VSCode - Learning Experience about ROS (Robot Operating System)"
 ARG MAINTAINER="Romulo Meira-Goes (romulo-goes)"
 
@@ -66,6 +66,9 @@ LABEL org.duckietown.label.module.type="exercise-vscode" \
 
 # <== Do not change the code above this line
 # <==================================================
+
+# source entrypoint in every bash session
+RUN echo "source /entrypoint.sh" >> /etc/bash.bashrc
 
 # setup vscode
 COPY --from=recipe assets/vscode/setup.sh /tmp/vscode_setup.sh

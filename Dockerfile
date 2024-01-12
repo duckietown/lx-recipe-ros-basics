@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 # parameters
-ARG EXERCISE_NAME="ros-basics"
+ARG EXERCISE_NAME="lx-ros-basics"
 ARG DESCRIPTION="Learning Experience about ROS (Robot Operating System)"
 ARG MAINTAINER="Romulo Meira-Goes (romulo-goes)"
 
