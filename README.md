@@ -1,3 +1,3 @@
-# LX Recipe: <LX_TITLE_HERE>
+# LX Recipe: ROS Basics
 
-TODO: add information that is useful for instructors
+Duckietown Learning Experience about ROS (Robot Operating System).
