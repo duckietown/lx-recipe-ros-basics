@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
-
 source /environment.sh
 
 source /opt/ros/noetic/setup.bash
