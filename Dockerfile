@@ -9,7 +9,7 @@ ARG MAINTAINER="Romulo Meira-Goes (romulo-goes)"
 ARG ARCH
 ARG DISTRO=daffy
 ARG DOCKER_REGISTRY=docker.io
-ARG BASE_IMAGE=challenge-aido_lf-template-ros
+ARG BASE_IMAGE=dt-core
 ARG BASE_TAG=${DISTRO}-${ARCH}
 ARG LAUNCHER=default
 
