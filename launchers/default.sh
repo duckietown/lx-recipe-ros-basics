@@ -1,10 +1,12 @@
 #!/bin/bash
 
+
 source /environment.sh
 
 source /opt/ros/noetic/setup.bash
-source /code/catkin_ws/devel/setup.bash --extend
-source /code/submission_ws/devel/setup.bash --extend
+source /code/devel/setup.bash --extend
 
-dt-exec-FG roslaunch --wait agent agent_node.launch
-copy-ros-logs
+if rosnode list | grep -q "joy_mapper_node"; then
+  rosnode kill /$VEHICLE_NAME/joy_mapper_node
+fi
+exec rosrun dt-joystick-demo dt-joystick-demo-node.py

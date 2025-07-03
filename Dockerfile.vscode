@@ -7,7 +7,7 @@ ARG MAINTAINER="Romulo Meira-Goes (romulo-goes)"
 # ==================================================>
 # ==> Do not change the code below this line
 ARG ARCH
-ARG DISTRO=daffy
+ARG DISTRO=ente
 ARG DOCKER_REGISTRY=docker.io
 ARG BASE_IMAGE=dt-vscode
 ARG BASE_TAG=${DISTRO}-${ARCH}
@@ -73,3 +73,5 @@ RUN echo "source /entrypoint.sh" >> /etc/bash.bashrc
 # setup vscode
 COPY --from=recipe assets/vscode/setup.sh /tmp/vscode_setup.sh
 RUN chmod +x /tmp/vscode_setup.sh && /tmp/vscode_setup.sh
+
+RUN chown $USER: -R /code
