@@ -7,10 +7,10 @@ ARG MAINTAINER="Romulo Meira-Goes (romulo-goes)"
 # ==================================================>
 # ==> Do not change the code below this line
 ARG ARCH
-ARG DISTRO=ente
+ARG DISTRO=ente-legacy-py38
 ARG DOCKER_REGISTRY=docker.io
 ARG BASE_IMAGE=dt-vscode
-ARG BASE_TAG=${DISTRO}-${ARCH}
+ARG BASE_TAG=ente-legacy-py38-${ARCH}
 ARG LAUNCHER=default
 
 # define base image
